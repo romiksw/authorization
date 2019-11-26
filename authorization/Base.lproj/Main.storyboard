@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EhA-72-O8X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Screen-->
+        <scene sceneID="wJm-hk-DyC">
+            <objects>
+                <viewController id="EhA-72-O8X" customClass="loginScreen" customModule="authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ge-9S-gjF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gzo-b7-uZu">
+                                <rect key="frame" x="50" y="244" width="314" height="194"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fc-lg-JMm">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppe-zg-Flb">
+                                        <rect key="frame" x="0.0" y="54" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-mb-x6c">
+                                        <rect key="frame" x="0.0" y="108" width="314" height="38"/>
+                                        <color key="backgroundColor" red="0.74508033397856088" green="0.76193791627883911" blue="0.56958198947618899" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="logInButton" destination="EhA-72-O8X" eventType="touchUpInside" id="rS3-b3-J11"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="3gH-ed-XlG">
+                                        <rect key="frame" x="0.0" y="166" width="314" height="28"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtl-Qn-VGt">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="28"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                                <state key="normal" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="forgotNameButton" destination="EhA-72-O8X" eventType="touchUpInside" id="8Ka-nM-32n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-es-Elf">
+                                                <rect key="frame" x="174" y="0.0" width="140" height="28"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                                <state key="normal" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="forgotPasswordButton" destination="EhA-72-O8X" eventType="touchUpInside" id="ZPU-Wr-HTb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gzo-b7-uZu" firstAttribute="top" secondItem="1Mz-JC-Ysz" secondAttribute="top" constant="200" id="EpD-St-vRN"/>
+                            <constraint firstItem="1Mz-JC-Ysz" firstAttribute="trailing" secondItem="gzo-b7-uZu" secondAttribute="trailing" constant="50" id="PjY-OA-LTt"/>
+                            <constraint firstItem="gzo-b7-uZu" firstAttribute="leading" secondItem="1Mz-JC-Ysz" secondAttribute="leading" constant="50" id="lFs-cV-838"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Mz-JC-Ysz"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="ppe-zg-Flb" id="4ff-af-9YG"/>
+                        <outlet property="userNameTextField" destination="3Fc-lg-JMm" id="fQG-ee-I45"/>
+                        <segue destination="876-yz-w6J" kind="presentation" identifier="trueLogIn" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="1oq-DJ-UkS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whv-48-Zhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37.681159420289859" y="-30.133928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z4R-27-dE3">
+            <objects>
+                <viewController id="876-yz-w6J" customClass="ViewController" customModule="authorization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6o-yZ-Tp7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ4-L7-i6I">
+                                <rect key="frame" x="155.5" y="589" width="103" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <state key="normal" title="Back Button"/>
+                                <connections>
+                                    <segue destination="hgC-VE-tP8" kind="unwind" unwindAction="unwindSegueWithSegue:" id="tvf-1S-bs1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hellow, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-dl-I8V">
+                                <rect key="frame" x="140" y="240" width="134.5" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJS-dl-I8V" firstAttribute="top" secondItem="LTM-Ow-Xle" secondAttribute="top" constant="196" id="Yll-Ah-uVV"/>
+                            <constraint firstItem="sJ4-L7-i6I" firstAttribute="centerX" secondItem="LTM-Ow-Xle" secondAttribute="centerX" id="hd8-1l-WM8"/>
+                            <constraint firstItem="LTM-Ow-Xle" firstAttribute="bottom" secondItem="sJ4-L7-i6I" secondAttribute="bottom" constant="237" id="q2D-j7-crf"/>
+                            <constraint firstItem="lJS-dl-I8V" firstAttribute="centerX" secondItem="LTM-Ow-Xle" secondAttribute="centerX" id="wWr-FS-XsK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LTM-Ow-Xle"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cH6-HB-nWF"/>
+                    <connections>
+                        <outlet property="backButton" destination="sJ4-L7-i6I" id="sMj-U9-tGZ"/>
+                        <outlet property="helloLabel" destination="lJS-dl-I8V" id="EcL-8U-SNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0s-wM-4Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hgC-VE-tP8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="-29"/>
+        </scene>
+    </scenes>
+</document>
