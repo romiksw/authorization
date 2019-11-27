@@ -51,8 +51,8 @@ class loginScreen: UIViewController {
     }
     
     func checkLoginPassword(userName: String, userPassword: String) {
-        if let key = users[userName] {
-            if userPassword == key {
+        if let value = users[userName] {
+            if userPassword == value {
                 performSegue(withIdentifier: "trueLogIn", sender: nil)
             } else {
                 showAlert(title: "Invalid login or password", message: "Please, enter correct")
